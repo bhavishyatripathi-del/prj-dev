@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. P. R. Jaishankar | Independent Director · Board Advisor · Senior Counsel</title>
+  <meta name="description" content="Thirty-seven years across development banking, infrastructure and housing finance. Institutional turnaround, policy shaping and capital mobilisation at scale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__mono"><span>P</span><span>R</span><span>J</span></div>
+      <div class="preloader__count"><span id="loadCount">0</span>%</div>
+      <div class="preloader__bar"><i id="loadBar"></i></div>
+    </div>
+  </div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"><span></span></div>
+  <div class="progress" id="progress"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <a href="#top" class="logo" data-scroll>
+      <span class="logo__mono">PRJ</span>
+      <span class="logo__text">Dr. P. R. Jaishankar<small>Infrastructure Advisory &amp; Consulting</small></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#profile" data-scroll>Profile</a>
+      <a href="#career" data-scroll>Career</a>
+      <a href="#impact" data-scroll>Impact</a>
+      <a href="#sco" data-scroll>SCO</a>
+      <a href="#practice" data-scroll>Practice</a>
+      <a href="#thought" data-scroll>Thought Leadership</a>
+      <a href="#contact" data-scroll>Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn--outline magnetic" data-scroll>
+      <span>Get in Touch</span>
+      <svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <svg class="scene" id="scene" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0d0b0a"/>
+            <stop offset=".35" stop-color="#2a1209"/>
+            <stop offset=".62" stop-color="#791704"/>
+            <stop offset=".72" stop-color="#EC7A02"/>
+          </linearGradient>
+          <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#FF9A3A" stop-opacity=".95"/>
+            <stop offset=".25" stop-color="#F47C01" stop-opacity=".55"/>
+            <stop offset="1" stop-color="#B84D02" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#C95A03"/>
+            <stop offset=".25" stop-color="#4a1806"/>
+            <stop offset="1" stop-color="#0b0908"/>
+          </linearGradient>
+          <linearGradient id="pylon" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#1a130d"/>
+            <stop offset=".55" stop-color="#2c1409"/>
+            <stop offset="1" stop-color="#EC7A02"/>
+          </linearGradient>
+        </defs>
+        <rect width="1200" height="800" fill="url(#sky)"/>
+        <g id="sun">
+          <circle cx="760" cy="540" r="300" fill="url(#glow)"/>
+          <circle cx="760" cy="540" r="46" fill="#FFB25E"/>
+        </g>
+        <g id="mtnFar"><path d="M0 520 L110 478 L220 505 L360 440 L500 498 L640 458 L760 510 L930 452 L1070 492 L1200 462 L1200 572 L0 572Z" fill="#4a1f0d" opacity=".75"/></g>
+        <g id="mtnNear"><path d="M0 548 L140 500 L260 535 L380 498 L520 556 L660 540 L1200 560 L1200 575 L0 575Z" fill="#1f0e07"/></g>
+        <g>
+          <rect y="566" width="1200" height="240" fill="url(#water)"/>
+          <g id="shimmer" fill="#FF9A3A">
+            <rect x="710" y="590" width="100" height="2" rx="1" opacity=".7"/>
+            <rect x="690" y="606" width="140" height="2" rx="1" opacity=".55"/>
+            <rect x="725" y="624" width="70" height="2" rx="1" opacity=".5"/>
+            <rect x="680" y="646" width="160" height="2" rx="1" opacity=".35"/>
+            <rect x="715" y="672" width="90" height="2" rx="1" opacity=".3"/>
+          </g>
+        </g>
+        <g id="bridge">
+          <path d="M462 604 L467 430 L473 430 L478 604Z" fill="#1c140e"/>
+          <g id="cables" stroke="#FFAE66" stroke-width="1.1" fill="none" stroke-linecap="round"></g>
+          <path d="M260 604 L1200 576 L1200 594 L260 618Z" fill="#100c09"/>
+          <path d="M260 604 L1200 576" stroke="#F47C01" stroke-width="1.2" opacity=".7"/>
+          <g id="piers" fill="#120d09"></g>
+          <path id="pylonMain" d="M840 660 L871 360 L875 128 L885 128 L889 360 L920 660 L905 660 L880 402 L855 660Z" fill="url(#pylon)"/>
+          <g id="lights" fill="#FFB25E"></g>
+        </g>
+      </svg>
+      <div class="hero__shade"></div>
+
+      <figure class="hero__portrait" id="heroPortrait" data-cursor="Profile">
+        <div class="hero__ring"><i></i></div>
+        <div class="arch"><img src="assets/jaishankar-portrait.jpg" alt="Dr. P. R. Jaishankar"></div>
+        <figcaption><b>Former Chairman &amp; MD</b>IIFCL · 2020 – 2025</figcaption>
+      </figure>
+
+      <div class="hero__content">
+        <span class="eyebrow hero__eyebrow">Independent Director · Board Advisor · Senior Counsel</span>
+        <h1 class="hero__title">
+          <span class="line"><span class="serif">Dr.</span> <span>Padmanabhan</span></span>
+          <span class="line"><span>Raja</span></span>
+          <span class="line"><span class="gold">Jaishankar</span></span>
+        </h1>
+        <div class="hero__bottom">
+          <p class="hero__sub"><i></i>Institutional turnaround, policy shaping and capital mobilisation at scale, across development banking, infrastructure and housing finance.</p>
+          <div class="hero__stat">
+            <span class="hero__big"><span class="count" data-to="37">0</span></span>
+            <span class="hero__label">Years in<br>Development<br>Finance</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__big"><span class="count" data-to="14">0</span></span>
+            <span class="hero__label">Years at Board,<br>CMD &amp; CEO<br>Levels</span>
+          </div>
+        </div>
+      </div>
+      <a href="#profile" class="scroll-hint" data-scroll><span>Scroll</span><svg viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6"/></svg></a>
+    </section>
+
+    <!-- ============ PORTRAIT EXPAND ============ -->
+    <section class="reveal" id="profile">
+      <div class="reveal__stage">
+        <div class="reveal__words" aria-hidden="true">
+          <span class="rw rw--l">Turnaround</span>
+          <span class="rw rw--r">Policy</span>
+          <span class="rw rw--l">Capital</span>
+        </div>
+        <div class="reveal__frame" id="revealFrame">
+          <img src="assets/jaishankar-formal.jpg" alt="Dr. P. R. Jaishankar">
+          <div class="reveal__tint"></div>
+          <div class="reveal__caption">
+            <span class="eyebrow">(01) Profile</span>
+            <p>“From a loss-making sovereign lender to its highest-ever profits, IPO-readiness and lowest-ever NPAs in just five years.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATEMENT ============ -->
+    <section class="statement">
+      <p class="statement__text" id="statement">Thirty-seven years across development banking, infrastructure and housing finance, including fourteen years at Board, Chairman, Managing Director and CEO levels, with a documented record of institutional turnaround, policy shaping and capital mobilisation at scale.</p>
+      <ul class="facts">
+        <li class="fade-up"><b>₹<span class="count" data-to="3.52" data-dec="2">0</span> Lakh Cr</b><span>Cumulative sanctions at IIFCL</span></li>
+        <li class="fade-up"><b>₹<span class="count" data-to="1.78" data-dec="2">0</span> Lakh Cr</b><span>Cumulative disbursements</span></li>
+        <li class="fade-up"><b>₹<span class="count" data-to="10000" data-sep="1">0</span> Cr+</b><span>Raised from multilaterals &amp; overseas markets</span></li>
+        <li class="fade-up"><b><span class="count" data-to="26">0</span>+</b><span>Infrastructure subsectors financed</span></li>
+      </ul>
+    </section>
+
+    <!-- ============ CAREER ARC ============ -->
+    <section class="career" id="career">
+      <div class="section-head">
+        <span class="eyebrow">Career Arc</span>
+        <h2 class="title reveal-words">Four Decades. Four Chapters.</h2>
+      </div>
+      <div class="arc">
+        <div class="arc__line"><i id="arcFill"></i></div>
+        <article class="arc__item">
+          <span class="arc__dot"></span>
+          <span class="arc__year">1988 – 2011</span>
+          <h3>NHB · HUDCO</h3>
+          <p>Sectoral &amp; housing finance</p>
+        </article>
+        <article class="arc__item">
+          <span class="arc__dot"></span>
+          <span class="arc__year">2011 – 2020</span>
+          <h3>IIFCL Group</h3>
+          <p>CGM, IIFCL · CEO, IIFCL Projects</p>
+        </article>
+        <article class="arc__item">
+          <span class="arc__dot"></span>
+          <span class="arc__year">2020 – 2025</span>
+          <h3>IIFCL</h3>
+          <p>Chairman &amp; Managing Director</p>
+        </article>
+        <article class="arc__item arc__item--now">
+          <span class="arc__dot"></span>
+          <span class="arc__year">2025 · Now</span>
+          <h3>Independent</h3>
+          <p>Director · Advisor · Counsel</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ MOMENTS (drag / scroll gallery) ============ -->
+    <section class="moments" id="moments">
+      <div class="moments__head">
+        <div>
+          <span class="eyebrow">Moments</span>
+          <h2 class="title reveal-words">Milestones of a Public Life.</h2>
+        </div>
+        <div class="moments__ctrl">
+          <span class="moments__count"><b id="momCount">01</b> / <span id="momTotal">08</span></span>
+          <button class="toggle active" id="viewCarousel" aria-label="Carousel view"><svg viewBox="0 0 24 24"><rect x="7" y="5" width="10" height="14" rx="1"/><path d="M3 7v10M21 7v10"/></svg></button>
+          <button class="toggle" id="viewGrid" aria-label="Grid view"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg></button>
+        </div>
+      </div>
+      <div class="moments__viewport" id="momViewport">
+        <div class="moments__track" id="momTrack"></div>
+      </div>
+      <p class="moments__hint"><span>Drag or scroll to explore · click a moment</span></p>
+
+      <div class="grid-view" id="gridView" aria-hidden="true">
+        <button class="grid-view__close" id="gridClose" aria-label="Close grid"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        <div class="grid-view__inner" id="gridInner"></div>
+      </div>
+    </section>
+
+    <!-- Moment detail panel -->
+    <aside class="detail" id="detail" aria-hidden="true">
+      <div class="detail__backdrop" id="detailBackdrop"></div>
+      <div class="detail__panel">
+        <button class="detail__close" id="detailClose" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        <div class="detail__media" id="detailMedia"></div>
+        <div class="detail__body">
+          <span class="detail__no" id="detailNo">No. 01</span>
+          <h3 id="detailTitle"></h3>
+          <span class="detail__meta" id="detailMeta"></span>
+          <p id="detailText"></p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ============ IMPACT ============ -->
+    <section class="impact" id="impact">
+      <div class="impact__head">
+        <div>
+          <span class="eyebrow">Signature Achievements · IIFCL</span>
+          <h2 class="title reveal-words">The Turnaround, in Numbers.</h2>
+          <p class="muted fade-up">Five years as Chairman &amp; Managing Director took IIFCL from a loss-making sovereign lender to record profits, IPO-readiness and its lowest-ever NPAs.</p>
+        </div>
+        <div class="fy-switch" id="fySwitch" role="tablist">
+          <i class="fy-switch__pill"></i>
+          <button role="tab" data-fy="0">FY 2020</button>
+          <button role="tab" data-fy="1" class="active">FY 2025</button>
+        </div>
+      </div>
+
+      <div class="metrics" id="metrics"></div>
+
+      <div class="impact__cards">
+        <div class="icard fade-up"><span>Cumulative Sanctions</span><b>₹3.52 Lakh Cr</b></div>
+        <div class="icard fade-up"><span>Cumulative Disbursements</span><b>₹1.78 Lakh Cr</b><small>IPO-ready with up to 25% equity dilution · FY25</small></div>
+        <div class="icard fade-up"><span>Resource Raising</span><b>₹10,000 Cr+</b><small>From multilaterals &amp; overseas markets</small></div>
+      </div>
+    </section>
+
+    <!-- ============ GOVERNANCE FOOTPRINT ============ -->
+    <section class="gov" id="governance">
+      <div class="section-head section-head--split">
+        <div>
+          <span class="eyebrow">(02) Governance Footprint</span>
+          <h2 class="title reveal-words">Board &amp; Chair Roles.</h2>
+        </div>
+        <p class="muted fade-up">Board, Chairman, Managing Director and CEO mandates across sovereign lenders, asset managers, mutual funds and statutory institutions in India and the United Kingdom.</p>
+      </div>
+      <ul class="roles">
+        <li class="role"><i class="role__line"></i><span class="role__yr">2020 – 2025</span><b>Chairman &amp; Managing Director</b><span class="role__org">IIFCL, Govt. of India (MoF)</span></li>
+        <li class="role"><i class="role__line"></i><span class="role__yr">2020 – 2025</span><b>Chairman</b><span class="role__org">IIFC (UK) Ltd., London</span></li>
+        <li class="role"><i class="role__line"></i><span class="role__yr">2020 – 2025</span><b>Chairman</b><span class="role__org">IIFCL Projects Ltd. · IIFCL Asset Management Co. (MF)</span></li>
+        <li class="role"><i class="role__line"></i><span class="role__yr">2013–14 · 2018–20</span><b>Director &amp; CEO</b><span class="role__org">IIFCL Projects Ltd. (Transaction Advisory &amp; Syndication)</span></li>
+        <li class="role"><i class="role__line"></i><span class="role__yr">2017 – 2020</span><b>Chairman, Board of Trustees</b><span class="role__org">IIFCL IDF Mutual Fund</span></li>
+        <li class="role"><i class="role__line"></i><span class="role__yr">2017 – 2020</span><b>Director · Chair, Risk Mgmt.</b><span class="role__org">IFCI Factors Ltd. (Audit, Credit, Nom., Stkhldr.)</span></li>
+        <li class="role"><i class="role__line"></i><span class="role__yr">2020</span><b>Director</b><span class="role__org">India Mortgage Guarantee Co. (NHB / IFC / ADB / Genworth)</span></li>
+        <li class="role"><i class="role__line"></i><span class="role__yr">2020</span><b>Executive Director</b><span class="role__org">National Housing Bank, a Statutory Institution</span></li>
+        <li class="role__end"><i class="role__line"></i></li>
+      </ul>
+
+      <div class="uk fade-up">
+        <span class="uk__tag">Concurrent Chair · 2020 – 2025</span>
+        <b>IIFC (UK) London</b>
+        <span>PAT ₹55 Cr</span><span>Net Worth ₹140 Cr</span><span>7th Fastest-Growing Indian Company in the UK (CII and Grant Thornton)</span>
+      </div>
+
+      <h3 class="sub-title fade-up">Government · Industry · Global Forums</h3>
+      <div class="forums">
+        <article class="forum"><span class="forum__n">01</span><h4>Inter-Ministerial Steering Committee, National Infrastructure Pipeline</h4><p>Ministry of Finance, Government of India.</p></article>
+        <article class="forum"><span class="forum__n">02</span><h4>DEA Working Group on InvIT Design</h4><p>SEBI regulatory framework. Original DEA delegation, chaired by Secretary, DEA.</p></article>
+        <article class="forum"><span class="forum__n">03</span><h4>CII Infrastructure Council · CII National Committee on Renewable Energy</h4><p>Sectoral policy, capital flows and renewable transition.</p></article>
+        <article class="forum"><span class="forum__n">04</span><h4>Managing Committee, Indian Banks' Association</h4><p>Banking-sector policy, prudential norms and sectoral exposure.</p></article>
+        <article class="forum forum--wide"><span class="forum__n">05</span><h4>Leadership Adviser, Green Cross United Kingdom</h4><p>Founded 1993 by Nobel Laureate Mikhail Gorbachev · UN ECOSOC Consultative Status · UNFCCC &amp; UNCCD Observer. Sustainability leadership, climate advocacy and responsible investment advisory, bridging India's infrastructure ESG practice with global environmental governance.</p></article>
+      </div>
+    </section>
+
+    <!-- ============ SCO ============ -->
+    <section class="sco" id="sco">
+      <div class="sco__grid">
+        <div class="sco__text">
+          <span class="eyebrow">(03) India's First-Ever Presidency</span>
+          <h2 class="title reveal-words">Chairman, SCO Interbank Consortium.</h2>
+          <span class="sco__date fade-up">26 October 2022 – 25 October 2023</span>
+          <p class="muted fade-up">Nominated by the Department of Financial Services, Ministry of Finance, GoI. Chaired the Shanghai Cooperation Organisation Interbank Consortium during India's presidency. It was the country's first-ever chairmanship since India's accession in 2017.</p>
+          <p class="muted fade-up">Convened eight development banks, the SCO Secretariat and heads of government delegations across Eurasia.</p>
+        </div>
+        <div class="sco-orbit" id="scoOrbit">
+          <svg viewBox="0 0 500 500" class="sco-orbit__rings"><circle cx="250" cy="250" r="200"/><circle cx="250" cy="250" r="140"/></svg>
+          <div class="sco-orbit__core" id="scoCore">
+            <span id="scoCountry">SCO IBC</span>
+            <b id="scoBank">Eight member development banks</b>
+          </div>
+          <div class="sco-orbit__nodes" id="scoNodes"></div>
+        </div>
+      </div>
+
+      <div class="agenda">
+        <h3 class="sub-title fade-up">Agenda Set as Chair</h3>
+        <div class="agenda__grid">
+          <article class="agenda__item"><span>01</span><h4>Expanded cooperation</h4><p>Driving fresh initiatives to deepen cross-border financing and partnerships within the consortium.</p></article>
+          <article class="agenda__item"><span>02</span><h4>Exchange of experience &amp; training</h4><p>Capacity-building activities for infrastructure institutions across the SCO region.</p></article>
+          <article class="agenda__item"><span>03</span><h4>Electronic collection of SCO IBC documents</h4><p>Backed the institutional knowledge initiative for the consortium's 20th anniversary.</p></article>
+          <article class="agenda__item"><span>04</span><h4>Sustainable infrastructure financing</h4><p>Positioned India's digital and sustainable-development experience as a template for member economies.</p></article>
+        </div>
+      </div>
+
+      <div class="cities" id="cities">
+        <div class="cities__line"><i id="citiesFill"></i></div>
+        <div class="city"><span class="city__dot"></span><b>Goa</b><small>XIX Council Meeting presided · 26 Apr 2023</small></div>
+        <div class="city"><span class="city__dot"></span><b>New Delhi</b><small>SCO IBC Council Meetings</small></div>
+        <div class="city"><span class="city__dot"></span><b>Samarkand</b><small>Uzbekistan · Council Meetings</small></div>
+        <div class="city"><span class="city__dot"></span><b>Bishkek</b><small>Council of Heads of Government addressed · 26 Oct 2023</small></div>
+      </div>
+    </section>
+
+    <!-- ============ CREDENTIALS ============ -->
+    <section class="creds" id="credentials">
+      <div class="section-head">
+        <span class="eyebrow">(04) Credentials</span>
+        <h2 class="title reveal-words">Why Boards Call Him.</h2>
+      </div>
+      <div class="creds__grid">
+        <article class="cred"><span class="cred__n">01</span><h3>Proven turnaround leader.</h3><p>Took IIFCL from a loss-making sovereign lender to its highest-ever profits, IPO-readiness and lowest-ever NPAs in five years.</p></article>
+        <article class="cred"><span class="cred__n">02</span><h3>Policy &amp; regulatory access.</h3><p>Member of national steering committees, CII councils and the IBA Managing Committee. Trusted voice with MoF, DEA, RBI and SEBI.</p></article>
+        <article class="cred"><span class="cred__n">03</span><h3>Global capital footprint.</h3><p>Resource-raising of ₹10,000 Cr+ from multilaterals and overseas markets. Chaired the SCO Inter-Bank Consortium across China, Russia and Central Asia.</p></article>
+        <article class="cred"><span class="cred__n">04</span><h3>Global sustainability leadership.</h3><p>Leadership Adviser, Green Cross United Kingdom, extending ESG influence across international environmental governance, aligned to IIFCL's Climate Strategy 2030 and India's net-zero 2070 commitment.</p></article>
+        <article class="cred"><span class="cred__n">05</span><h3>ESG credentialed.</h3><p>Architect of IIFCL's Sustainability and ESG Financing Framework and Climate Strategy 2030, aligned to India's net-zero 2070.</p></article>
+        <article class="cred"><span class="cred__n">06</span><h3>Scholar-practitioner.</h3><p>Ph.D. in financial intermediation for infrastructure (Amity); five Scopus-indexed publications on credit enhancement, InvITs and securitisation.</p></article>
+      </div>
+
+      <div class="arch-list">
+        <h3 class="sub-title fade-up">Policy &amp; Instrument Architecture · Authored or Co-Designed</h3>
+        <details class="acc" open><summary><span>01</span>Credit Enhancement Programme<i></i></summary><p>India's first CE programme, launched to deepen the corporate-bond market for infrastructure.</p></details>
+        <details class="acc"><summary><span>02</span>Tripartite Concession Agreement Framework<i></i></summary><p>Standardised lender–concessionaire–authority risk allocation across PPP highway and urban projects.</p></details>
+        <details class="acc"><summary><span>03</span>Project Completion Risk Insurance · Online Project Monitoring<i></i></summary><p>Reform contributions adopted by the sector for construction-phase risk and live project surveillance.</p></details>
+        <details class="acc"><summary><span>04</span>Sustainability &amp; ESG Financing Framework · Climate Strategy 2030<i></i></summary><p>Aligned IIFCL's lending to India's net-zero 2070 commitment; integrated sustainable-finance disclosure norms.</p></details>
+      </div>
+
+      <div class="gcreds">
+        <article class="gcred fade-up"><small>Audit · Risk · Credit</small><h4>Asset-quality discipline.</h4><p>Reduced IIFCL Net NPA from 9.75% to 0.35% and Gross NPA from 19.70% to 1.11% (FY20–FY25). Chaired the Risk Management Committee at IFCI Factors; member of Credit, Audit, Nomination and Stakeholder Committees.</p></article>
+        <article class="gcred fade-up"><small>Nomination · Remuneration · ESG</small><h4>Governance &amp; disclosure.</h4><p>Architect of IIFCL's Sustainability and ESG Financing Framework and Climate Strategy 2030. Steered IPO-readiness with Board-approved equity dilution of up to 25%.</p></article>
+        <article class="gcred fade-up"><small>Strategy · Capital · International</small><h4>Growth &amp; capital allocation.</h4><p>Lined up over ₹10,000 Cr from international investors, multilaterals and domestic institutions. Concurrent Chair of IIFC (UK) London.</p></article>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEES ============ -->
+    <div class="tags">
+      <div class="tags__row"><span class="tags__label">Sectors Financed</span>
+        <div class="tags__track" data-dir="-1">
+          <span>Roads &amp; Transportation</span><span>Energy (Hydro, Thermal, Gas, Transmission)</span><span>Renewables</span><span>EV &amp; Battery</span><span>Smart Meters</span><span>Ports &amp; Shipping</span><span>Airports</span><span>Urban Infrastructure &amp; City Gas</span><span>Data Centres</span><span>Healthcare</span><span>Education</span><span>Industrial Parks</span><span>Convention Centres</span><span>Housing &amp; Mortgage Guarantee</span>
+        </div>
+      </div>
+      <div class="tags__row"><span class="tags__label">Instruments &amp; Structures</span>
+        <div class="tags__track" data-dir="1">
+          <span>Project Finance</span><span>Loan Syndication</span><span>Credit Enhancement</span><span>Takeout Finance</span><span>Subordinate Debt</span><span>Project Bonds</span><span>Asset Recycling</span><span>InvITs</span><span>Infrastructure Debt Funds</span><span>Mutual Funds</span><span>External Commercial Borrowings</span><span>ESG Financing Framework</span><span>IPO Readiness</span><span>Mortgage Credit Guarantee</span><span>RMBS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ THE PRACTICE ============ -->
+    <section class="practice-intro" id="practice">
+      <span class="eyebrow">The Practice</span>
+      <h2 class="practice-intro__title reveal-words">Infrastructure Advisory &amp; Consulting, led by Dr. Jaishankar.</h2>
+      <p class="muted fade-up">Strategic, financial and technical advisory services for infrastructure development, project financing and investment facilitation for governments, public institutions, private enterprises and investors.</p>
+    </section>
+
+    <section class="services" id="services">
+      <div class="services__head">
+        <div>
+          <span class="eyebrow">Our Expertise</span>
+          <h2 class="title reveal-words">Comprehensive Advisory Solutions.</h2>
+        </div>
+        <div class="svc-progress" aria-hidden="true">
+          <span id="svcCount">01</span><i><b id="svcBar"></b></i><span>06</span>
+          <small>Scroll to explore</small>
+        </div>
+      </div>
+      <div class="svc-grid" id="svcGrid">
+        <button class="svc active"><svg viewBox="0 0 40 40"><path d="M5 34h30M9 34V22h5v12M17.5 34V15h5v19M26 34V8h5v26"/></svg><h3>Financial &amp; Transaction Advisory</h3><span class="mini"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <button class="svc"><svg viewBox="0 0 40 40"><path d="M6 27h28v4H6zM9 27c0-7 4.5-12 11-12s11 5 11 12M17 15V9h6v6M20 9v-3"/></svg><h3>Project &amp; Technical Advisory</h3><span class="mini"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <button class="svc"><svg viewBox="0 0 40 40"><path d="M20 6L35 14 20 22 5 14zM5 20l15 8 15-8M5 26l15 8 15-8"/></svg><h3>Policy &amp; Regulatory Consulting</h3><span class="mini"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <button class="svc"><svg viewBox="0 0 40 40"><path d="M3 18l7-7 6 3 5-3 6 2 10 5M10 11l-6 12M37 18l-7 9M16 14l-5 6c1.5 1.5 3.5 1.5 5 0l3-3 8 8M19 28l3 3M15 30l3 3"/></svg><h3>PPP &amp; Infrastructure Financing</h3><span class="mini"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <button class="svc"><svg viewBox="0 0 40 40"><path d="M10 5h15l6 6v24H10zM25 5v6h6M15 17h11M15 22h11M15 27h7"/></svg><h3>Legal &amp; Documentation</h3><span class="mini"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <button class="svc"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="4"/><circle cx="8" cy="8" r="3"/><circle cx="32" cy="8" r="3"/><circle cx="8" cy="32" r="3"/><circle cx="32" cy="32" r="3"/><path d="M10 10l7 7M30 10l-7 7M10 30l7-7M30 30l-7-7"/></svg><h3>Research &amp; Capacity Building</h3><span class="mini"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+      </div>
+      <div class="svc-detail" id="svcDetail">
+        <span class="svc-detail__num" id="svcNum">01</span>
+        <div><h4 id="svcTitle"></h4><p id="svcText"></p></div>
+        <ul id="svcList"></ul>
+      </div>
+    </section>
+
+    <section class="sectors" id="sectors">
+      <div class="sectors__intro">
+        <span class="eyebrow">Sector Expertise</span>
+        <h2 class="title reveal-words">Expertise Across Critical Infrastructure Sectors.</h2>
+        <p class="fade-up muted">Supporting infrastructure development across diverse sectors through integrated financial, technical and strategic advisory.</p>
+        <div class="arrows">
+          <button class="arrow magnetic" id="secPrev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button class="arrow arrow--gold magnetic" id="secNext" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="panels" id="panels">
+        <article class="panel active" style="--g:linear-gradient(180deg,#EC7A02,#791704 60%,#1a0904)">
+          <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" onerror="this.remove()">
+          <div class="panel__body"><svg viewBox="0 0 40 40"><path d="M14 6l-8 28M26 6l8 28M20 8v4M20 16v5M20 25v6M4 34h32"/></svg><h3>Transport &amp; Logistics</h3><p>Roads, bridges, ports, shipyards, inland waterways, airports, railways, urban transport, logistics infrastructure and pipelines.</p></div>
+        </article>
+        <article class="panel" style="--g:linear-gradient(180deg,#F47C01,#7a2606 55%,#14100b)">
+          <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" onerror="this.remove()">
+          <div class="panel__body"><svg viewBox="0 0 40 40"><path d="M20 4v10M20 14l-9 5M20 14l9 5M20 14v22M14 36h12"/></svg><h3>Energy</h3><p>Electricity generation, transmission, distribution, renewable energy, oil and gas storage, and energy storage systems.</p></div>
+        </article>
+        <article class="panel" style="--g:linear-gradient(180deg,#C95A03,#5e1a05 55%,#0f1210)">
+          <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" onerror="this.remove()">
+          <div class="panel__body"><svg viewBox="0 0 40 40"><path d="M20 5c6 8 10 13 10 18a10 10 0 01-20 0c0-5 4-10 10-18zM14 25a6 6 0 006 6"/></svg><h3>Water &amp; Sanitation</h3><p>Solid waste management, sewage systems, irrigation, water treatment and stormwater drainage.</p></div>
+        </article>
+        <article class="panel" style="--g:linear-gradient(180deg,#EC7A02,#791704 55%,#120d09)">
+          <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" onerror="this.remove()">
+          <div class="panel__body"><svg viewBox="0 0 40 40"><path d="M20 14L12 36M20 14l8 22M15 27h10M20 14v-2M12 8a11 11 0 0116 0M15 11a6 6 0 0110 0"/></svg><h3>Communication</h3><p>Telecommunication networks, telecom towers and data centres.</p></div>
+        </article>
+        <article class="panel" style="--g:linear-gradient(180deg,#B84D02,#6b1f05 55%,#110d0a)">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" onerror="this.remove()">
+          <div class="panel__body"><svg viewBox="0 0 40 40"><path d="M20 6l6 4v6l6 4v6l-6 4v4h-12v-4l-6-4v-6l6-4v-6zM17 22h6v12"/></svg><h3>Social Infrastructure</h3><p>Education, healthcare, sports infrastructure and affordable housing.</p></div>
+        </article>
+        <article class="panel" style="--g:linear-gradient(180deg,#F47C01,#5e1a05 55%,#100d0a)">
+          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" onerror="this.remove()">
+          <div class="panel__body"><svg viewBox="0 0 40 40"><path d="M5 34h30M8 34V12h24v22M8 12l4-6h16l4 6M13 18h4v4h-4zM23 18h4v4h-4zM17 34v-7h6v7"/></svg><h3>Commercial Infrastructure</h3><p>Cold chains, terminal markets, Special Economic Zones (SEZs), tourism and industrial parks.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="approach" id="approach">
+      <div class="approach__pin">
+        <div class="approach__intro">
+          <span class="eyebrow">Our Methodology</span>
+          <h2 class="title reveal-words">From Concept to Financial Closure.</h2>
+          <p class="muted fade-up">Comprehensive support across the infrastructure project lifecycle, from initial assessment and strategic planning to financing, transaction execution and evaluation.</p>
+        </div>
+        <div class="orbit" id="orbit">
+          <svg viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="180" class="orbit__track"/>
+            <circle cx="200" cy="200" r="180" class="orbit__fill" id="orbitFill"/>
+            <circle cx="200" cy="200" r="140" class="orbit__inner"/>
+          </svg>
+          <div class="orbit__dot" id="orbitDot"></div>
+          <div class="orbit__core">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy" onerror="this.remove()">
+            <span class="orbit__stage" id="orbitStage">01</span>
+          </div>
+        </div>
+        <ol class="steps" id="steps">
+          <li class="step"><span class="step__n">01</span><div><b>Project Assessment</b><small>Feasibility studies, project assessment and due diligence.</small></div></li>
+          <li class="step"><span class="step__n">02</span><div><b>Strategic Planning</b><small>DPRs, techno-economic analysis and financial modelling.</small></div></li>
+          <li class="step"><span class="step__n">03</span><div><b>Structuring &amp; Financing</b><small>PPP structuring, capital structuring, debt, equity &amp; hybrid financing.</small></div></li>
+          <li class="step"><span class="step__n">04</span><div><b>Transaction Support</b><small>Bid process management, contract structuring &amp; investment facilitation.</small></div></li>
+          <li class="step"><span class="step__n">05</span><div><b>Monitoring &amp; Evaluation</b><small>Project monitoring, performance evaluation &amp; impact assessment.</small></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ THOUGHT LEADERSHIP ============ -->
+    <section class="thought" id="thought">
+      <div class="section-head">
+        <span class="eyebrow">(05) Education &amp; Thought Leadership</span>
+        <h2 class="title reveal-words">Scholar. Practitioner. Teacher.</h2>
+      </div>
+      <div class="thought__grid">
+        <div>
+          <h3 class="col-label">Education</h3>
+          <ol class="edu">
+            <li class="edu__item"><b>Ph.D. in Management</b><span>Amity International Business School, Amity University</span><small>Design of a Model Financial Intermediation Structure for Infrastructure Finance in India</small></li>
+            <li class="edu__item"><b>Ph.D. (Honoris Causa)</b><span>Maryland State University, Gaithersburg, USA</span><small>For contributions to Infrastructure Finance Management</small></li>
+            <li class="edu__item"><b>Master of Business Administration</b><span>Faculty of Management Studies, University of Delhi</span><small>Financial Management</small></li>
+            <li class="edu__item"><b>Master of Technology</b><span>Indian Institute of Technology, Delhi</span><small>Water Resources Engineering</small></li>
+            <li class="edu__item"><b>Bachelor of Engineering</b><span>Osmania University, Hyderabad</span><small>Civil Engineering</small></li>
+          </ol>
+        </div>
+        <div>
+          <h3 class="col-label">Selected Publications · Scopus Indexed</h3>
+          <ul class="pubs">
+            <li class="pub"><span class="pub__n">01</span><div><b>Credit Enhancement: An Enabler for Secondary Market Development of Infrastructure Finance in India</b><small>Finance India · Vol. 36, No. 1</small></div><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></li>
+            <li class="pub"><span class="pub__n">02</span><div><b>Augmenting Indian Infrastructure Finance: Exemplification of Two Innovative Instruments</b><small>International Journal of Mechanical Engineering · Vol. 6</small></div><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></li>
+            <li class="pub"><span class="pub__n">03</span><div><b>Emergence of an Innovative Financial Instrument: Infrastructure Investment Trust (InvIT)</b><small>AYAM Journal · Vol. 12</small></div><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></li>
+            <li class="pub"><span class="pub__n">04</span><div><b>Reverse Mortgages in India: New Dimensions in Emerging Horizons</b><small>Indian Journal of Finance · Vol. 4, Issue 11</small></div><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></li>
+            <li class="pub"><span class="pub__n">05</span><div><b>Residential Mortgage-backed Securitization: A Market-Oriented Alternative for Funding Housing in India</b><small>Indian Journal of Marketing · Vol. 39, Issue 3</small></div><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></li>
+          </ul>
+          <p class="academic fade-up"><b>Academic</b> Visiting Faculty, NTPC School of Business (with IIM Ahmedabad), teaching Infrastructure Project Finance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Affiliations -->
+    <div class="marquee" aria-label="Trusted institutional affiliations">
+      <div class="marquee__track" id="marquee">
+        <span>Ministry of Finance, GoI</span><b>✦</b><span>DEA</span><b>✦</b><span>Reserve Bank of India</span><b>✦</b><span>SEBI</span><b>✦</b><span>Indian Banks' Association</span><b>✦</b><span>CII</span><b>✦</b><span>National Housing Bank</span><b>✦</b><span>IFC</span><b>✦</b><span>Asian Development Bank</span><b>✦</b><span>Green Cross United Kingdom</span><b>✦</b>
+        <span>Ministry of Finance, GoI</span><b>✦</b><span>DEA</span><b>✦</b><span>Reserve Bank of India</span><b>✦</b><span>SEBI</span><b>✦</b><span>Indian Banks' Association</span><b>✦</b><span>CII</span><b>✦</b><span>National Housing Bank</span><b>✦</b><span>IFC</span><b>✦</b><span>Asian Development Bank</span><b>✦</b><span>Green Cross United Kingdom</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="cta" id="contact">
+      <div class="cta__inner">
+        <div class="cta__info">
+          <span class="eyebrow">Get in Touch</span>
+          <h2 class="cta__title reveal-words">Let’s Build the Infrastructure of Tomorrow.</h2>
+          <figure class="cta__portrait fade-up">
+            <img src="assets/jaishankar-portrait.jpg" alt="">
+            <figcaption><b>Dr. P. R. Jaishankar</b>Available for Board appointments, advisory mandates and counsel.</figcaption>
+          </figure>
+          <ul class="cta__contacts">
+            <li class="fade-up"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg><span><small>Email</small>[Official Email Address]</span></li>
+            <li class="fade-up"><svg viewBox="0 0 24 24"><path d="M6 3h4l2 5-3 2a11 11 0 005 5l2-3 5 2v4a2 2 0 01-2 2A17 17 0 014 5a2 2 0 012-2z"/></svg><span><small>Phone</small>[Official Phone Number]</span></li>
+            <li class="fade-up"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/></svg><span><small>Office</small>[Registered Office Address]</span></li>
+          </ul>
+        </div>
+
+        <form class="form" id="ctaForm" novalidate>
+          <div class="form__head"><b>Engagement Enquiry</b><span class="form__steps" id="formFill"><i></i></span></div>
+
+          <fieldset class="chips chips--radio">
+            <legend>Nature of engagement</legend>
+            <label><input type="radio" name="type" value="Board Appointment" checked><span>Board Appointment</span></label>
+            <label><input type="radio" name="type" value="Advisory Mandate"><span>Advisory Mandate</span></label>
+            <label><input type="radio" name="type" value="Transaction Advisory"><span>Transaction Advisory</span></label>
+            <label><input type="radio" name="type" value="Legal Counsel"><span>Legal Counsel</span></label>
+            <label><input type="radio" name="type" value="Speaking"><span>Speaking / Keynote</span></label>
+          </fieldset>
+
+          <div class="form__grid">
+            <label class="field"><input type="text" name="name" placeholder=" " required autocomplete="name"><span>Full name *</span><em>Please enter your name</em></label>
+            <label class="field"><input type="text" name="org" placeholder=" " required autocomplete="organization"><span>Organisation *</span><em>Please enter your organisation</em></label>
+            <label class="field"><input type="email" name="email" placeholder=" " required autocomplete="email"><span>Work email *</span><em>Enter a valid email address</em></label>
+            <label class="field"><input type="tel" name="phone" placeholder=" " pattern="[0-9+\s\-]{8,15}" autocomplete="tel"><span>Phone number</span><em>Enter a valid phone number</em></label>
+            <label class="field"><input type="text" name="designation" placeholder=" " autocomplete="organization-title"><span>Designation</span></label>
+            <label class="field field--select">
+              <select name="sector">
+                <option value="" selected disabled hidden></option>
+                <option>Transport &amp; Logistics</option><option>Energy</option><option>Water &amp; Sanitation</option>
+                <option>Communication</option><option>Social Infrastructure</option><option>Commercial Infrastructure</option>
+                <option>Banking &amp; Financial Services</option><option>Other</option>
+              </select>
+              <span>Sector</span>
+            </label>
+          </div>
+
+          <label class="field field--area"><textarea name="message" rows="4" placeholder=" " required></textarea><span>How can Dr. Jaishankar help? *</span><em>Please add a short description</em></label>
+
+          <label class="consent"><input type="checkbox" name="consent" required><i></i><span>I agree to be contacted regarding my enquiry.</span></label>
+
+          <button class="btn btn--gold btn--block magnetic" type="submit" id="formBtn"><span>Submit Enquiry</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></button>
+
+          <div class="form__done" id="formDone" aria-live="polite">
+            <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-15"/></svg>
+            <b>Thank you!</b>
+            <p class="muted">Your enquiry has been received. The office of Dr. Jaishankar will be in touch shortly.</p>
+            <button type="button" class="btn btn--outline" id="formAgain"><span>Send another enquiry</span></button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__big" aria-hidden="true">JAISHANKAR</div>
+    <div class="footer__row">
+      <a href="#top" class="logo" data-scroll>
+        <span class="logo__mono">PRJ</span>
+        <span class="logo__text">Dr. P. R. Jaishankar<small>Infrastructure Advisory &amp; Consulting</small></span>
+      </a>
+      <span class="muted">Strategic Insight · Financial Expertise · Infrastructure Development</span>
+      <span class="muted">© 2026 All Rights Reserved.</span>
+      <a href="#top" class="circle-btn magnetic" data-scroll aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
